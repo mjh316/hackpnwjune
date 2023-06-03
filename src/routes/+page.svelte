@@ -1,5 +1,5 @@
 <script lang="ts">
-	let title = 'Survace';
+	let title = 'RISHI FINISH YOUR IA';
 </script>
 
 <div class="hero min-h-screen bg-base-200">
