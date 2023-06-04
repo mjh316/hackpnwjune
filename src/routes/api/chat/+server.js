@@ -26,7 +26,7 @@ export async function GET({ url }) {
     console.log(data);
 
     const outputData = JSON.stringify(data);
-    return new Response(String(body) + outputData);
+    return new Response(outputData);
   } catch (error) {
     console.error('Error:', error);
     return new Response('ERROR: ' + error);
