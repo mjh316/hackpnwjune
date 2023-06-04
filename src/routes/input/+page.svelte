@@ -106,6 +106,7 @@
 					bind:value={$location.city}
 					id="cityInput"
 					class="rounded-full input bg-white border-[#1D4464] border-2"
+					placeholder="Your city"
 				/>
 			</div>
 			<div class="flex flex-col max-w-xs">
@@ -114,6 +115,7 @@
 					bind:value={$inputPage.budget}
 					id="budgetInput"
 					class="rounded-full input bg-white border-[#1D4464] border-2"
+					placeholder="Yearly budget ($)"
 				/>
 			</div>
 			<div class="flex flex-col max-w-xs">
@@ -122,6 +124,7 @@
 					bind:value={$inputPage.time}
 					id="timeInput"
 					class="rounded-full input bg-white border-[#1D4464] border-2"
+					placeholder="Weekly time (min)"
 				/>
 			</div>
 			<div class="flex flex-col max-w-xl">
@@ -132,6 +135,7 @@
 					bind:value={$inputPage.personalStatement}
 					id="problemStatement"
 					class="rounded-full textarea resize-none bg-white border-[#1D4464] border-2"
+					placeholder="What are you inspired to solve?"
 				/>
 			</div>
 			<button class="btn max-w-xs bg-[#77C6FF] text-white"> Show me! </button>
