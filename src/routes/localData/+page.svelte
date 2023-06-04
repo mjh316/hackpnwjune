@@ -54,7 +54,7 @@
 	import { fade } from 'svelte/transition';
 </script>
 
-<main class="bg-white min-h-screen flex-1 flex flex-col items-center justify-center">
+<main class="bg-base-200 min-h-screen flex-1 flex flex-col items-center justify-center">
 	{#if visible}
 		<CircleLink
 			href="#energy"
@@ -107,34 +107,13 @@
 		{/if}
 	</div>
 </main>
-<div class="flex-none bg-white text-black -mt-20 pt-20 min-h-screen">
-	<div class="ml-10 mt-10 flex flex-col gap-y-6">
-		<div id="energy" class="scroll-mt-20">
-			<h1 class="text-amber-500 lg:text-5xl text-3xl">
-				Energy Usage <img class="inline" src="Energy.svg" alt="Energy Icon" />
-			</h1>
-			<div class="flex gap-x-4 gap-y-4 lg:gap-y-0 lg:flex-row flex-col mt-4 justify-center">
-				<Card
-					title="Average Energy Usage"
-					description={`The average energy usage in ${mockData.city} is ${mockData.energyData.electricity_usage_kWh} kWh.`}
-				/>
-				<Card
-					title="Average Gas Usage"
-					description={`The average gas usage in ${mockData.city} is ${mockData.energyData.gas_usage_m3} cubic meters.`}
-				/>
-				<Card
-					title="Total Energy Usage"
-					description={`Total energy usage in ${mockData.city} is ${
-						mockData.energyData.electricity_usage_kWh + mockData.energyData.gas_usage_m3 * 10.55
-					} kWh.`}
-				/>
-			</div>
-		</div>
+<div class="flex-none bg-base-200 text-black -mt-20 pt-20 min-h-screen">
+	<div class="ml-36 mt-10 flex flex-col gap-y-6">
 		<div id="airquality" class="scroll-mt-20">
 			<h1 class="text-accent lg:text-5xl text-3xl">
 				Air Quality <img class="inline" src="Air.svg" alt="Air Icon" />
 			</h1>
-			<div class="flex gap-x-4 gap-y-4 lg:gap-y-0 lg:flex-row flex-col mt-4 justify-center">
+			<div class="flex gap-x-4 gap-y-4 lg:gap-y-0 lg:flex-col [&>*]:my-4 flex-col mt-4 justify-center">
 				<Card
 					title={'Average Air Quality Index'}
 					description={`The average air quality in ${mockData.city} is ${mockData.airQualityData.air_quality_index} AQI.`}
@@ -149,11 +128,32 @@
 				/>
 			</div>
 		</div>
+		<div id="energy" class="scroll-mt-20">
+			<h1 class="text-amber-500 lg:xtext-5xl text-3xl">
+				Energy Usage <img class="inline" src="Energy.svg" alt="Energy Icon" />
+			</h1>
+			<div class="float-left flex gap-x-4 gap-y-4 lg:gap-y-0 lg:flex-col [&>*]:my-4 flex-col mt-4 justify-center float-left">
+				<Card
+					title="Average Energy Usage"
+					description={`The average energy usage in ${mockData.city} is ${mockData.energyData.electricity_usage_kWh} kWh.`}
+				/>
+				<Card
+					title="Average Gas Usage"
+					description={`The average gas usage in ${mockData.city} is ${mockData.energyData.gas_usage_m3} cubic meters.`}
+				/>	
+				<Card
+					title="Total Energy Usage"
+					description={`Total energy usage in ${mockData.city} is ${
+						mockData.energyData.electricity_usage_kWh + mockData.energyData.gas_usage_m3 * 10.55
+					} kWh.`}
+				/>
+			</div>
+		</div>
 		<div id="invasivespecies" class="scroll-mt-20">
 			<h1 class="text-secondary lg:text-5xl text-3xl">
 				Invasive Species <img class="inline" src="Species.svg" alt="Species Icon" />
 			</h1>
-			<div class="flex gap-x-4 gap-y-4 lg:gap-y-0 lg:flex-row flex-col mt-4 justify-center">
+			<div class="flex gap-x-4 gap-y-4 lg:gap-y-0 lg:flex-col [&>*]:my-4 flex-col mt-4 justify-center">
 				<Card
 					title={'Average Invasive Species 1'}
 					description={`The average invasive species in ${mockData.city} is ${mockData.invasiveSpeciesData.invasive_species[0].species_name} species.`}
@@ -172,7 +172,7 @@
 			<h1 class="lg:text-5xl text-3xl text-blue-500">
 				Water Quality <img class="inline" src="Water.svg" alt="Water Icon" />
 			</h1>
-			<div class="flex gap-x-4 gap-y-4 lg:gap-y-0 lg:flex-row flex-col mt-4 justify-center">
+			<div class="flex gap-x-4 gap-y-4 lg:gap-y-0 lg:flex-col [&>*]:my-4 flex-col mt-4 justify-center">
 				<Card
 					title={'Average Water Quality PH'}
 					description={`The average water quality pH in ${mockData.city} is ${mockData.waterQualityData.ph_level} pH.`}
