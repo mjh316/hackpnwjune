@@ -161,7 +161,9 @@
 						<div class="collapse-content">
 							{#each result.split('-') as res, j}
 								{#if res !== `Goal ${i + 1}`}
-									<div class={'text-white text-lg ' + (j == 1 ? ' text-2xl' : '')}>{res}</div>
+									<div class={'dark:text-white text-black text-lg ' + (j == 1 ? ' text-2xl' : '')}>
+										{res}
+									</div>
 								{/if}
 							{/each}
 						</div>
