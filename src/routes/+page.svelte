@@ -90,10 +90,10 @@
 			personalized and actionable ways for individuals to improve their environmental footprint. Our
 			goal is to empower users by providing localized recommendations and motivation to make a
 			positive impact on their communities and the planet. 
-			<br></br>
+			<br>
 			
 			EcologMe simplifies the process by gathering user input on location, budget, free time, and environmental goals. Using trusted sources like IQAir, we collect data on air and water quality, littering, and biodiversity, forming the basis for personalized recommendations tailored to each user's needs and local community. 
-		<br></br>
+		<br>
 			EcologMe empowers users to make a difference by offering practical steps to improve their environmental footprint. The platform encourages action and progress tracking, fostering engagement and providing a supportive community. EcologMe values user feedback, incorporates new data insights, and stays updated with emerging environmental practices to ensure effective recommendations and features.
 
 
