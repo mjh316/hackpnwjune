@@ -5,3 +5,9 @@ export const location = writable({
     city: '',
     state: ''
 });
+
+export const inputPage = writable({
+    budget: '',
+    time: '',
+    personalStatement: ''
+})
