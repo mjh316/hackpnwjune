@@ -36,7 +36,7 @@
 					<h1 class="lg:text-6xl text-4xl text-white font-bold">CREATE YOUR IMPACT</h1>
 					<div class=" text-center flex flex-col items-center">
 						<p class="py-6 text-md text-white max-w-sm text-center">
-							Enter your approximate location to get started analysing your environmental impact.
+							Enter your approximate location find out how you can impact the world.
 						</p>
 						<div class="form-control mx-auto justify-center w-full py-0 max-w-sm">
 							<label class="label gap-x-10" for="city_or_zip_input">
