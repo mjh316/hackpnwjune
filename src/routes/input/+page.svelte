@@ -36,9 +36,10 @@
 		loading = false;
 		console.log('fetched results');
 		const elapsedTime = Date.now() - startTime;
-		const solutionData = await solutionsRes.json();
-		const solution = solutionData.choices[0].message.content;
-		results = solution.split('\n');
+		const solution = await solutionsRes.text();
+		// const solutionData = await solutionsRes.json();
+		// const solution = solutionData.choices[0].message.content;
+		results = solution.split('\n\n');
 		console.log('elapsedTime', elapsedTime, 'solution', results);
 		// console.log(solutionData);
 	}
