@@ -8,7 +8,7 @@
 <div
 	class={'navbar fixed text-neutral text-center py-4 px-2' +
 		' ' +
-		($scrollY > 650 ? 'bg-[#77C6FF]' : '') +
+		($scrollY > 650 ? 'bg-[#77C6FF] bg-opacity-100' : '') +
 		' ' +
 		($scrollY > 10 ? 'backdrop-filter bg-opacity-30 backdrop-blur-sm' : '') +
 		' ' +

@@ -23,7 +23,7 @@
 	// $: console.log($scrollY);
 </script>
 
-<div class="bg-inherit flex-1 min-h-screen text-neutral pt-20">
+<div class="bg-inherit flex-1 min-h-screen text-neutral mt-20 pt-20">
 	<div class="locale w-full max-w-lg m-auto py-16">
 		<div class="text-center">
 			<div class="max-w-lg">
@@ -51,8 +51,8 @@
 		</div>
 	</div>
 </div>
-<div class="flex-none text-neutral h-screen -mt-20 pt-20">
-	<h1 class="text-neutral lg:text-4xl md:text-3xl text-2xl">Our Mission</h1>
+<div class="flex-none text-neutral bg-white h-screen -mt-20 pt-20">
+	<h1 class="pl-10 pt-10 text-neutral lg:text-5xl md:text-4xl text-3xl">Our Mission</h1>
 </div>
 <svelte:window bind:scrollY={$scrollY} />
 
