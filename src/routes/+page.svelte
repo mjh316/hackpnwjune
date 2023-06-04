@@ -1,7 +1,10 @@
 <script lang="ts">
 	import { location } from '@/stores/home';
+	import { scrollY } from '@/stores/scroll';
+
 	$: zipCode = $location.zip.match(/\d{5}/g)?.[0];
 	$: cityName = $location.zip;
+
 	async function lookUpZip() {
 		if (!zipCode) {
 			$location.city = cityName;
@@ -17,9 +20,10 @@
 		$location.state = res.state;
 		return res;
 	}
+	// $: console.log($scrollY);
 </script>
 
-<div class="bg-base-200 flex-1 mt-20">
+<div class="bg-inherit flex-1 min-h-screen text-neutral pt-20">
 	<div class="locale w-full max-w-lg m-auto py-16">
 		<div class="text-center">
 			<div class="max-w-lg">
@@ -30,28 +34,27 @@
 					</p>
 					<div class="form-control w-full py-0">
 						<label class="label" for="city_or_zip_input">
-							<span class="label-text">What is your city?</span>
-							<span class="label-text-alt">Name or Zip</span>
+							<span class="label-text text-neutral">What is your city?</span>
+							<span class="label-text-alt text-neutral">Name or Zip</span>
 						</label>
 						<input
 							bind:value={$location.zip}
 							id="city_or_zip_input"
 							type="text"
 							placeholder="Enter city or zip"
-							class="input input-bordered w-full"
+							class="input input-bordered w-full text-primary-content"
 						/>
 					</div>
-					<a
-						on:click={lookUpZip}
-						href="/input"
-						class="btn bg-slate-500 text-slate-200 hover:bg-slate-200 hover:text-slate-900 hover:border-slate-900 my-8 btn-link"
-						>Get Started</a
-					>
+					<a on:click={lookUpZip} href="/input" class="btn my-8">Get Started</a>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
+<div class="flex-none text-neutral h-screen -mt-20 pt-20">
+	<h1 class="text-neutral lg:text-4xl md:text-3xl text-2xl">Our Mission</h1>
+</div>
+<svelte:window bind:scrollY={$scrollY} />
 
 <style>
 </style>
