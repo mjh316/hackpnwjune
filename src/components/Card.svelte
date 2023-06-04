@@ -3,7 +3,7 @@
 	export let description: string;
 </script>
 
-<div class="card w-96 bg-base-100 shadow-2xl drop-shadow-2xl text-neutral-content">
+<div class="card w-96 bg-slate-100 shadow-sm drop-shadow-lg text-slate-800">
 	<div class="card-body">
 		<h2 class="card-title">{title}</h2>
 		<p class="text-xl">

@@ -16,9 +16,9 @@
 >
 	<img width="64" height="64" src="logo.png" alt="Logo" />
 	<ul class="[&>*]:px-4 list-none float-left">
-		<a href="/" class="text-3xl btn btn-ghost font-bold">{title}</a>
-		<li class="text-xl"><a href="/localData">Location Data</a></li>
-		<li class="text-xl"><a href="/input">Solutions</a></li>
+		<a href="/" class="text-3xl text-white btn btn-ghost font-bold">{title}</a>
+		<li class="text-xl text-white"><a href="/localData">Location Data</a></li>
+		<li class="text-xl text-white"><a href="/input">Solutions</a></li>
 	</ul>
 </div>
 

@@ -45,6 +45,11 @@
 	}
 </script>
 
+<svelte:head>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+	<link href="https://fonts.googleapis.com/css2?family=Rambla&display=swap" rel="stylesheet" />
+</svelte:head>
 <div class="grid grid-cols-1 lg:grid-cols-2 flex-1 bg-white mt-10">
 	<!-- <div class="form-control gap-y-2 w-full max-w-xs">
 		<label class="label" for="cityInput">
@@ -92,7 +97,7 @@
 		Show me!
 	</button> -->
 	<div class="mt-20 ml-14 mb-20">
-		<h1 class="lg:text-6xl text-[#1D4464] text-4xl">How Can I Help?</h1>
+		<h1 class="lg:text-6xl text-[#1D4464] pt-10 text-4xl">How Can I Help?</h1>
 		<h3 class="text-xl mt-4 lg:text-2xl text-[#1D4464]">Take our short questionnaire!</h3>
 		<form on:submit={fetchResults} class="flex flex-col gap-y-6 text-[#1D4464] mt-4">
 			<div class="flex flex-col max-w-xs">
@@ -160,5 +165,8 @@
 <style>
 	.label-text {
 		color: black;
+	}
+	div {
+		font-family: 'Rambla', sans-serif;
 	}
 </style>
