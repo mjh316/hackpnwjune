@@ -34,8 +34,8 @@
 			<div class="text-center">
 				<div class="max-w-lg">
 					<h1 class="lg:text-6xl text-4xl font-bold">GET ANALYSING</h1>
-					<div class="">
-						<p class="py-6 text-md">
+					<div class=" text-center flex flex-col items-center">
+						<p class="py-6 text-md max-w-sm text-center">
 							Enter your approximate location to get started analysing your environmental impact.
 						</p>
 						<div class="form-control mx-auto justify-center w-full py-0 max-w-sm">
@@ -57,9 +57,11 @@
 			</div>
 		</div>
 	</div>
-	<div class="flex-none text-neutral bg-white min-h-full -mt-20 pt-20">
+	<section
+		class="parallax mb-40 bg-white flex-none text-neutral min-h-fit -mt-20 overflow-clip pt-20"
+	>
 		<h1 class="pl-10 pt-10 text-neutral lg:text-5xl md:text-4xl text-3xl">Our Mission</h1>
-		<p class="pl-10 leading-loose text-xl">
+		<p class="pl-10 leading-loose text-lg lg:text-xl">
 			At Ecologme, our mission is to empower individuals and communities to make a positive impact
 			on the environment. Through user- and locale-based input, we provide actionable and motivating
 			ways for people to improve their environmental footprint. By leveraging user input, including
@@ -78,8 +80,8 @@
 			concerns and motivations, we aim to inspire and empower individuals to take meaningful action towards
 			a greener and more sustainable future.
 		</p>
-	</div>
-	<div class="flex-none text-neutral bg-white min-h-full -mt-20 pt-20">
+	</section>
+	<section class="parallax mb-40 flex-none text-neutral bg-white min-h-full -mt-20 pt-20">
 		<h1 class="pl-10 pt-10 text-neutral lg:text-5xl md:text-4xl text-3xl">What is Ecologme?</h1>
 		<p class="pl-10 leading-loose text-xl">
 			Ecologme is a user-centric platform that leverages location-based input to generate
@@ -87,8 +89,10 @@
 			goal is to empower users by providing localized recommendations and motivation to make a
 			positive impact on their communities and the planet.
 		</p>
-	</div>
-	<div class="flex-1 text-neutral bg-white min-h-full -mt-20 pt-20">
+	</section>
+	<section
+		class="parallax mb-40 flex-1 text-neutral bg-white min-h-full overflow-clip -mt-20 pt-20"
+	>
 		<h1 class="pl-10 pt-10 text-neutral lg:text-5xl md:text-4xl text-3xl">How does it work?</h1>
 		<p class="pl-10 leading-loose text-xl">
 			Ecologme operates through a simple yet effective process. It begins by gathering user input,
@@ -108,12 +112,12 @@
 			environmental practices. This ensures that Ecologme's recommendations and features remain effective,
 			relevant, and impactful over time.
 		</p>
-	</div>
-	<div class="flex-none text-neutral bg-white h-screen -mt-20 pt-20">
+	</section>
+	<section class="parallax flex-none text-neutral min-h-full bg-white h-screen -mt-20 pt-20">
 		<h1 class="pl-10 pt-10 text-neutral lg:text-5xl md:text-4xl text-3xl">
 			Fill Out Our Questionnaire
 		</h1>
-	</div>
+	</section>
 </div>
 <svelte:window bind:scrollY={$scrollY} />
 
@@ -130,11 +134,33 @@
 		margin-right: auto;
 		scrollbar-width: none;
 		-ms-overflow-style: none;
-		padding-bottom: 5rem;
 	}
 	.container::-webkit-scrollbar {
 		width: 0px;
 		background: transparent;
+	}
+	section {
+		transform-style: preserve-3d;
+		position: relative;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+	}
+	.parallax h1 {
+		width: 60%;
+		font-size: 2rem;
+	}
+
+	.parallax::after {
+		content: ' ';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		transform: translateZ(-1px) scale(1.5);
+		background-size: 100%;
+		z-index: -1;
 	}
 	div {
 		font-family: 'Rambla', sans-serif;
