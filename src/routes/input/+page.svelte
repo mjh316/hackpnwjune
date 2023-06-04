@@ -134,7 +134,7 @@
 				<textarea
 					bind:value={$inputPage.personalStatement}
 					id="problemStatement"
-					class="rounded-full textarea resize-none bg-white border-[#1D4464] border-2"
+					class="rounded-md textarea resize-none bg-white border-[#1D4464] border-2"
 					placeholder="What are you inspired to solve?"
 				/>
 			</div>
