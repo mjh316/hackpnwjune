@@ -109,7 +109,7 @@
 </main>
 <div class="flex-none bg-white text-black -mt-20 pt-20 min-h-screen">
 	<div class="ml-10 mt-10 flex flex-col gap-y-6">
-		<div id="energy">
+		<div id="energy" class="scroll-mt-20">
 			<h1 class="text-amber-500 lg:text-5xl text-3xl">
 				Energy Usage <img class="inline" src="Energy.svg" alt="Energy Icon" />
 			</h1>
@@ -130,7 +130,7 @@
 				/>
 			</div>
 		</div>
-		<div id="airquality">
+		<div id="airquality" class="scroll-mt-20">
 			<h1 class="text-accent lg:text-5xl text-3xl">
 				Air Quality <img class="inline" src="Air.svg" alt="Air Icon" />
 			</h1>
@@ -149,7 +149,7 @@
 				/>
 			</div>
 		</div>
-		<div id="invasivespecies">
+		<div id="invasivespecies" class="scroll-mt-20">
 			<h1 class="text-secondary lg:text-5xl text-3xl">
 				Invasive Species <img class="inline" src="Species.svg" alt="Species Icon" />
 			</h1>
@@ -168,7 +168,7 @@
 				/>
 			</div>
 		</div>
-		<div id="waterquality" class="mb-10">
+		<div id="waterquality" class="mb-10 scroll-mt-20">
 			<h1 class="lg:text-5xl text-3xl text-blue-500">
 				Water Quality <img class="inline" src="Water.svg" alt="Water Icon" />
 			</h1>
