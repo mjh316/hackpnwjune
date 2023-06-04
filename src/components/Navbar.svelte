@@ -17,8 +17,8 @@
 	<img width="64" height="64" src="logo.png" alt="Logo" />
 	<ul class="[&>*]:px-4 list-none float-left">
 		<a href="/" class="text-3xl btn btn-ghost font-bold">{title}</a>
-		<li class="text-xl"><a href="/">Go To Suggester Engine</a></li>
-		<li class="text-xl"><a href="/localData">Local Data</a></li>
+		<li class="text-xl"><a href="/localData">Location Data</a></li>
+		<li class="text-xl"><a href="/input">Solutions</a></li>
 	</ul>
 </div>
 

@@ -13,7 +13,24 @@
     		Time: ${$inputPage.time}
     		Personal Interest: ${$inputPage.personalStatement}
     		This is an entry from a person who would like to do tasks to become involved in saving the environment.
-    		Using the budget, time, personal interest and the problem to tackle, Create 5 specific goals/tasks that a person can do daily to tackle the problem
+    		Using the budget, time, personal interest and the problem to tackle, Create 5 specific action items that a person can do weekly to tackle the problem, refer to exactly how much money he has to spend and exactly the time he has to spend out of your reccommendations
+
+
+			Goal 1
+			- Goal
+
+			Goal 2
+			- Goal
+
+			Goal 3
+			- Goal
+
+			Goal 4
+			- Goal
+
+			Goal 5
+			- Goal
+
     `;
 		const solutionsRes = await fetch(`/api/chat?msg=${prompt}`);
 		loading = false;
@@ -46,7 +63,7 @@
 			bind:value={$inputPage.budget}
 			id="budgetInput"
 			type="number"
-			placeholder="Type here..."
+			placeholder="Monthly dollars"
 			class="input input-bordered w-full max-w-xs"
 		/>
 		<label class="label" for="timeInput">
@@ -56,7 +73,7 @@
 			bind:value={$inputPage.time}
 			id="timeInput"
 			type="text"
-			placeholder="Type here..."
+			placeholder="Weekly minutes"
 			class="input input-bordered w-full max-w-xs"
 		/>
 	</div>
