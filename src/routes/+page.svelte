@@ -32,8 +32,8 @@
 					<p class="py-6 text-md">
 						Enter your approximate location to get started analysing your environmental impact.
 					</p>
-					<div class="form-control w-full py-0">
-						<label class="label" for="city_or_zip_input">
+					<div class="form-control mx-auto justify-center w-full py-0 max-w-sm">
+						<label class="label gap-x-10" for="city_or_zip_input">
 							<span class="label-text text-neutral">What is your city?</span>
 							<span class="label-text-alt text-neutral">Name or Zip</span>
 						</label>
