@@ -6,7 +6,7 @@
 </script>
 
 <div
-	class={'navbar fixed text-neutral text-center py-4 px-2' +
+	class={'navbar fixed text-neutral z-10 text-center py-4 px-2' +
 		' ' +
 		($scrollY > 650 ? 'bg-[#77C6FF] bg-opacity-100' : '') +
 		' ' +
@@ -17,6 +17,7 @@
 	<ul class="[&>*]:px-4 list-none float-left">
 		<a href="/" class="text-3xl btn btn-ghost font-bold">{title}</a>
 		<li class="text-xl"><a href="/">Go To Suggester Engine</a></li>
+		<li class="text-xl"><a href="/localData">Local Data</a></li>
 	</ul>
 </div>
 
