@@ -96,7 +96,7 @@
 		Show me!
 	</button> -->
 	<div class="mt-20 ml-14 mb-20">
-		<h1 class="lg:text-6xl text-[#1D4464] text-4xl">How Can I Help?</h1>
+		<h1 class="lg:text-6xl text-[#1D4464] pt-10 text-4xl">How Can I Help?</h1>
 		<h3 class="text-xl mt-4 lg:text-2xl text-[#1D4464]">Take our short questionnaire!</h3>
 		<form on:submit={fetchResults} class="flex flex-col gap-y-6 text-[#1D4464] mt-4">
 			<div class="flex flex-col max-w-xs">
