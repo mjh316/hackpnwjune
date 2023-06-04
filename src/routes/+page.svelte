@@ -48,7 +48,7 @@
 								id="city_or_zip_input"
 								type="text"
 								placeholder="Enter city or zip"
-								class="input input-bordered w-full text-primary-content"
+								class="input input-bordered w-full"
 							/>
 						</div>
 						<a on:click={lookUpZip} href="/input" class="btn my-8">Get Started</a>
