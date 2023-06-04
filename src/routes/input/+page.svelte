@@ -105,7 +105,7 @@
 				<input
 					bind:value={$location.city}
 					id="cityInput"
-					class="rounded-full input bg-white border-[#1D4464] border-2"
+					class="rounded-xl input bg-white border-[#1D4464] border-2"
 					placeholder="Your city"
 				/>
 			</div>
@@ -114,7 +114,7 @@
 				<input
 					bind:value={$inputPage.budget}
 					id="budgetInput"
-					class="rounded-full input bg-white border-[#1D4464] border-2"
+					class="rounded-xl input bg-white border-[#1D4464] border-2"
 					placeholder="Yearly budget ($)"
 				/>
 			</div>
@@ -123,7 +123,7 @@
 				<input
 					bind:value={$inputPage.time}
 					id="timeInput"
-					class="rounded-full input bg-white border-[#1D4464] border-2"
+					class="rounded-xl input bg-white border-[#1D4464] border-2"
 					placeholder="Weekly time (min)"
 				/>
 			</div>
@@ -134,7 +134,7 @@
 				<textarea
 					bind:value={$inputPage.personalStatement}
 					id="problemStatement"
-					class="rounded-md textarea resize-none bg-white border-[#1D4464] border-2"
+					class="rounded-xl textarea resize-none bg-white border-[#1D4464] border-2"
 					placeholder="What are you inspired to solve?"
 				/>
 			</div>
