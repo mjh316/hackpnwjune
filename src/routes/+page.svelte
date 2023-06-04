@@ -1,8 +1,11 @@
 <script lang="ts">
 	import { location } from '@/stores/home';
 	$: zipCode = $location.zip.match(/\d{5}/g)?.[0];
+	$: cityName = $location.zip;
 	async function lookUpZip() {
 		if (!zipCode) {
+			$location.city = cityName;
+			$location.state = '';
 			return;
 		}
 		const req = await fetch(`/api/lookupZipcode?zip=${zipCode}`);

@@ -10,8 +10,9 @@
 		<input
 			value={$location.city ? $location.city + ' ' + $location.state : ''}
 			id="cityInput"
-			class={'input flex flex-col justify-center input-bordered w-full max-w-xs ' +
-				($location.city ? 'bg-neutral text-primary' : '')}
+			disabled={$location.city ? true : false}
+			class={'input flex flex-col justify-center input-bordered disabled:input-bordered disabled:input w-full max-w-xs ' +
+				($location.city ? 'bg-neutral text-base' : '')}
 		/>
 		<label class="label" for="budgetInput">
 			<span class="label-text">Budget (in USD)</span>
