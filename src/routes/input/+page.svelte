@@ -39,7 +39,10 @@
 		const solution = await solutionsRes.text();
 		// const solutionData = await solutionsRes.json();
 		// const solution = solutionData.choices[0].message.content;
-		results = solution.split(solution.includes('\n\n') ? '\n\n' : '\n');
+		results = solution.split('\n\n');
+		if (results.length == 1) {
+			results = solution.split('\n');
+		}
 		console.log('elapsedTime', elapsedTime, 'solution', results);
 		// console.log(solutionData);
 	}
