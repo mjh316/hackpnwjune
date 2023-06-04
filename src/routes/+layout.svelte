@@ -22,5 +22,7 @@
 <style>
 	:global(html) {
 		scroll-behavior: smooth;
+		height: 100%;
+		overflow: hidden;
 	}
 </style>

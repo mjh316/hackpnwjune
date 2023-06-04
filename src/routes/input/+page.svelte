@@ -70,25 +70,27 @@
 			class="input input-bordered w-full text-white"
 		/>
 	</div>
-	<button disabled={loading} on:click={fetchResults} class="btn btn-neutral my-4"> Show me! </button>
+	<button disabled={loading} on:click={fetchResults} class="btn btn-neutral my-4">
+		Show me!
+	</button>
 	{#if loading}
-		<span class="loading loading-spinner loading-lg"></span>
+		<span class="loading loading-spinner loading-lg" />
 	{/if}
 	{#if results.length === 0 && !loading}
 		<span class="text-2xl">No results yet</span>
 	{:else}
-	<ul class="flex flex-col gap-y-2">
-	{#each results as result, i}
-		{#if result.trim() !== ''}
-			<div class="collapse collapse-arrow bg-base-200 max-w-96">
-				<input type="radio" name="my-accordion-2" />
-				<div class="collapse-title text-xl">Goal {i}</div>
-				<div class="collapse-content">
-					<p>{result}</p>
-				</div>
-			</div>
-		{/if}
-	{/each}
+		<ul class="flex flex-col gap-y-2">
+			{#each results as result, i}
+				{#if result.trim() !== ''}
+					<div class="collapse collapse-arrow bg-base-200 max-w-96">
+						<input type="radio" name="my-accordion-2" />
+						<div class="collapse-title text-xl">Goal {i}</div>
+						<div class="collapse-content">
+							<p>{result}</p>
+						</div>
+					</div>
+				{/if}
+			{/each}
 		</ul>
 	{/if}
 </div>

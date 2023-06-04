@@ -6,7 +6,7 @@
 </script>
 
 <div
-	class={'navbar fixed text-neutral z-10 text-center py-4 px-2' +
+	class={'navbar will-change-transform fixed backdrop-filter bg-opacity-30 backdrop-blur-sm text-neutral z-10 text-center py-4 px-2' +
 		' ' +
 		($scrollY > 650 ? 'bg-[#77C6FF] bg-opacity-100' : '') +
 		' ' +
