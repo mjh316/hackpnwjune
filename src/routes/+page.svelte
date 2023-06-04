@@ -106,22 +106,10 @@
 			How does it work?
 		</h1>
 		<p class="pl-10 pt-10 leading-loose text-lg lg:text-xl">
-			EcologMe operates through a simple yet effective process. It begins by gathering user input,
-			where individuals provide information about their location, budget, free time, and specific
-			environmental goals. This input helps EcologMe understand the unique context and priorities of
-			each user. Utilizing trusted sources like OpenAQ, EcologMe then collects crucial localization
-			data on air quality, water quality, littering, and biodiversity. This data forms the
-			foundation for personalized recommendations tailored to each user's needs and their local
-			community. By offering practical steps to improve their environmental footprint, EcologMe
-			empowers users to make a tangible difference in their surroundings.
-			<br /><br />
-			But EcologMe doesn't stop at recommendations. The platform goes a step further by encouraging users
-			to take action and track their progress. By fostering continuous engagement and providing a supportive
-			community, EcologMe helps individuals celebrate their achievements and stay motivated on their
-			environmental journey. Additionally, EcologMe is committed to constant improvement. The platform
-			actively listens to user feedback, incorporates new data insights, and stays up-to-date with emerging
-			environmental practices. This ensures that EcologMe's recommendations and features remain effective,
-			relevant, and impactful over time.
+Our backend inferences a fine tuned Generative Pre-Trained Transformer model (OpenAI GPT-3.5 Turbo) and semantic search algorithms, to generate real-time recommendations. We also use a collection of API’s including IQAir and WeatherAPI to analyze real-time international data and display stats on air pollution, water contamination, energy consumption and invasive species to increase awareness and tailor custom goals that fit the users budget, location, and time needs.
+<br /><br />
+For the front-end, we used the SvelteKit framework to make our app as light and efficient as possible - our lighthouse score of 100 proves it. We handle massive load and similar/duplicated queries using Redis caching, allowing us to scale to the entire world. This ensures that Ecologme is fast, responsive, and adaptive for all our users.
+
 		</p>
 	</section>
 </div>
