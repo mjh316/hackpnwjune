@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { city } from '@/stores/home';
+	import { location } from '@/stores/home';
 </script>
 
 <div class="flex flex-col items-center justify-center flex-1 bg-base-200">
@@ -8,7 +8,8 @@
 			<span class="label-text">City Name</span>
 		</label>
 		<span id="cityInput" class="input flex flex-col justify-center input-bordered w-full max-w-xs">
-			{$city}
+			{$location.city},
+			{$location.state}
 		</span>
 		<label class="label" for="budgetInput">
 			<span class="label-text">Budget (in USD)</span>

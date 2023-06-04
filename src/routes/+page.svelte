@@ -1,25 +1,18 @@
 <script lang="ts">
-	import { city } from '@/stores/home';
-	let xml = (zip: number) => `<CityStateLookupRequest USERID="">
-    	<ZipCode>
-        	<Zip5>${zip}</Zip5>
-    	</ZipCode>
-	</CityStateLookupRequest>`;
-	$: zipCode = $city.match(/\d{5}/g)?.[0];
+	import { location } from '@/stores/home';
+	$: zipCode = $location.zip.match(/\d{5}/g)?.[0];
 	async function lookUpZip() {
-		console.log('zipcode', zipCode);
-		let zip = zipCode ? parseInt(zipCode) : 0;
-		let city = '';
-		let state = '';
-		let url = 'http://production.shippingapis.com/ShippingAPI.dll?API=CityStateLookup&XML=';
-		let response = await fetch(url + xml(zip));
-		let data = await response.text();
-		let parser = new DOMParser();
-		let xmlDoc = parser.parseFromString(data, 'text/xml');
-		// zip = parseInt(xmlDoc.getElementsByTagName('Zip5')[0].childNodes[0].nodeValue!);
-		city = xmlDoc.getElementsByTagName('City')[0].childNodes[0].nodeValue!;
-		state = xmlDoc.getElementsByTagName('State')[0].childNodes[0].nodeValue!;
-		console.log('zip, city, state', zip, city, state);
+		if (!zipCode) {
+			return;
+		}
+		const req = await fetch(`/api/lookupZipcode?zip=${zipCode}`);
+		const res = (await req.json()) as unknown as {
+			city: string;
+			state: string;
+		};
+		$location.city = res.city;
+		$location.state = res.state;
+		return res;
 	}
 </script>
 
@@ -38,7 +31,7 @@
 							<span class="label-text-alt">Name or Zip</span>
 						</label>
 						<input
-							bind:value={$city}
+							bind:value={$location.zip}
 							id="city_or_zip_input"
 							type="text"
 							placeholder="Enter city or zip"
@@ -46,6 +39,7 @@
 						/>
 					</div>
 					<a
+						on:click={lookUpZip}
 						href="/input"
 						class="btn bg-slate-500 text-slate-200 hover:bg-slate-200 hover:text-slate-900 hover:border-slate-900 my-8 btn-link"
 						>Get Started</a

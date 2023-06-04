@@ -1,3 +1,7 @@
 import { writable } from 'svelte/store';
 
-export const city = writable('');
+export const location = writable({
+    zip: '',
+    city: '',
+    state: ''
+});
