@@ -51,7 +51,7 @@
 								class="input input-bordered w-full"
 							/>
 						</div>
-						<a on:click={lookUpZip} href="/input" class="btn my-8">Get Started</a>
+						<a on:click={lookUpZip} href="/localData" class="btn my-8">Get Started</a>
 					</div>
 				</div>
 			</div>
