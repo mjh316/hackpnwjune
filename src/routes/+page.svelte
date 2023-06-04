@@ -44,7 +44,6 @@
 						class="btn bg-slate-500 text-slate-200 hover:bg-slate-200 hover:text-slate-900 hover:border-slate-900 my-8 btn-link"
 						>Get Started</a
 					>
-					<button on:click={lookUpZip} class="btn btn-neutral">LookUp Zip</button>
 				</div>
 			</div>
 		</div>

@@ -7,10 +7,12 @@
 		<label class="label" for="cityInput">
 			<span class="label-text">City Name</span>
 		</label>
-		<span id="cityInput" class="input flex flex-col justify-center input-bordered w-full max-w-xs">
-			{$location.city},
-			{$location.state}
-		</span>
+		<input
+			value={$location.city ? $location.city + ' ' + $location.state : ''}
+			id="cityInput"
+			class={'input flex flex-col justify-center input-bordered w-full max-w-xs ' +
+				($location.city ? 'bg-neutral text-primary' : '')}
+		/>
 		<label class="label" for="budgetInput">
 			<span class="label-text">Budget (in USD)</span>
 		</label>
