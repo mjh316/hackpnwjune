@@ -14,7 +14,7 @@ export async function GET({ url }) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer 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'
+        'Authorization': `Bearer ${token}`
       },
       body: JSON.stringify({
         model: 'gpt-3.5-turbo',
