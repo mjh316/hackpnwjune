@@ -2,7 +2,7 @@
 	import { location } from '@/stores/home';
 </script>
 
-<div class="flex flex-col items-center justify-center flex-1 bg-base-200">
+<div class="flex flex-col items-center justify-center flex-1 bg-white">
 	<div class="form-control gap-y-2 w-full max-w-xs">
 		<label class="label" for="cityInput">
 			<span class="label-text">City Name</span>
@@ -34,3 +34,9 @@
 		/>
 	</div>
 </div>
+
+<style>
+	.label-text {
+		color: black;
+	}
+</style>
