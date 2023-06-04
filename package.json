@@ -33,6 +33,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@fontsource/rambla": "^5.0.2",
 		"@vercel/kv": "^0.2.1"
 	}
 }

@@ -1,11 +1,8 @@
 <script>
 	import InfoForm from './infoform.svelte';
+	import '@fontsource/rambla';
 </script>
-<svelte:head>
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
-	<link href="https://fonts.googleapis.com/css2?family=Rambla&display=swap" rel="stylesheet" />
-</svelte:head>
+
 <div class="infocontainer flex h-full w-screen overflow-hidden">
 	<InfoForm />
 </div>

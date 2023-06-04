@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { location, inputPage } from '@/stores/home';
+	import '@fontsource/rambla';
 	let loading = false;
 	let results: string[] = [];
 	async function fetchResults() {
@@ -48,11 +49,6 @@
 	}
 </script>
 
-<svelte:head>
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
-	<link href="https://fonts.googleapis.com/css2?family=Rambla&display=swap" rel="stylesheet" />
-</svelte:head>
 <div class="grid grid-cols-1 lg:grid-cols-2 flex-1 bg-white mt-10">
 	<!-- <div class="form-control gap-y-2 w-full max-w-xs">
 		<label class="label" for="cityInput">

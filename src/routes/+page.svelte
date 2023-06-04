@@ -1,4 +1,5 @@
 <script lang="ts">
+	import '@fontsource/rambla';
 	import { location } from '@/stores/home';
 	import { scrollY } from '@/stores/scroll';
 
@@ -23,11 +24,6 @@
 	$: console.log($scrollY);
 </script>
 
-<svelte:head>
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
-	<link href="https://fonts.googleapis.com/css2?family=Rambla&display=swap" rel="stylesheet" />
-</svelte:head>
 <div class="container">
 	<div class="bg-inherit flex-1 min-h-screen text-neutral mt-20 pt-20">
 		<div class="locale w-full max-w-lg m-auto py-16">
