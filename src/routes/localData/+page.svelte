@@ -3,35 +3,53 @@
 		city: 'Seattle',
 		state: 'WA',
 		energyData: {
-			energyUsage: 0.5,
-			energyCost: 0.5,
-			energySource: 'solar',
-			energySourcePercentage: 0.5,
-			energySourceCost: 0.5,
-			energySourceEmissions: 0.5,
-			energySourceEmissionsPercentage: 0.5,
-			energySourceEmissionsCost: 0.5
+			location: 'Seattle, WA',
+			timestamp: '2023-06-01T12:00:00Z',
+			electricity_usage_kWh: 2500,
+			gas_usage_m3: 150
 		},
 		airQualityData: {
-			airQuality: 0.5,
-			airQualityCost: 0.5,
-			airQualityEmissions: 0.5,
-			airQualityEmissionsCost: 0.5
+			location: 'Seattle, WA',
+			timestamp: '2023-06-01T12:00:00Z',
+			air_quality_index: 68,
+			pm2_5: 9.8,
+			pm10: 15.2,
+			o3: 45.6,
+			no2: 18.3,
+			so2: 3.2,
+			co: 0.5
 		},
 		invasiveSpeciesData: {
-			invasiveSpecies: 0.5,
-			invasiveSpeciesCost: 0.5,
-			invasiveSpeciesEmissions: 0.5,
-			invasiveSpeciesEmissionsCost: 0.5
+			location: 'Seattle, WA',
+			timestamp: '2023-06-01T12:00:00Z',
+			invasive_species: [
+				{
+					species_name: 'Japanese Knotweed',
+					infestation_area_sq_m: 1500
+				},
+				{
+					species_name: 'European Green Crab',
+					infestation_area_sq_m: 250
+				},
+				{
+					species_name: 'Spotted Lanternfly',
+					infestation_area_sq_m: 100
+				}
+			]
 		},
 		waterQualityData: {
-			waterQuality: 0.5,
-			waterQualityCost: 0.5,
-			waterQualityEmissions: 0.5,
-			waterQualityEmissionsCost: 0.5
+			location: 'Seattle, WA',
+			timestamp: '2023-06-01T12:00:00Z',
+			ph_level: 7.2,
+			temperature_celsius: 12.5,
+			dissolved_oxygen_ppm: 8.3,
+			turbidity_ntu: 5.7,
+			nitrate_mg_per_l: 1.2,
+			phosphate_mg_per_l: 0.5
 		}
 	};
 	let visible = true;
+	import Card from '@/components/Card.svelte';
 	import CircleLink from '@/components/CircleLink.svelte';
 	import { fade } from 'svelte/transition';
 </script>
@@ -95,41 +113,78 @@
 			<h1 class="text-amber-500 lg:text-5xl text-3xl">
 				Energy Usage <img class="inline" src="Energy.svg" alt="Energy Icon" />
 			</h1>
-			<div>
-				<p class="text-xl">
-					The average energy usage in {mockData.city} is {mockData.energyData.energyUsage} kWh.
-				</p>
+			<div class="flex gap-x-4 mt-4 justify-center">
+				<Card
+					title="Average Energy Usage"
+					description={`The average energy usage in ${mockData.city} is ${mockData.energyData.electricity_usage_kWh} kWh.`}
+				/>
+				<Card
+					title="Average Gas Usage"
+					description={`The average gas usage in ${mockData.city} is ${mockData.energyData.gas_usage_m3} cubic meters.`}
+				/>
+				<Card
+					title="Total Energy Usage"
+					description={`Total energy usage in ${mockData.city} is ${
+						mockData.energyData.electricity_usage_kWh + mockData.energyData.gas_usage_m3 * 10.55
+					} kWh.`}
+				/>
 			</div>
 		</div>
 		<div id="airquality">
 			<h1 class="text-accent lg:text-5xl text-3xl">
 				Air Quality <img class="inline" src="Air.svg" alt="Air Icon" />
 			</h1>
-			<div>
-				<p class="text-xl">
-					The average air quality in {mockData.city} is {mockData.airQualityData.airQuality} AQI.
-				</p>
+			<div class="flex gap-x-4 mt-4 justify-center">
+				<Card
+					title={'Average Air Quality Index'}
+					description={`The average air quality in ${mockData.city} is ${mockData.airQualityData.air_quality_index} AQI.`}
+				/>
+				<Card
+					title={'Average Carbon Dioxide Level'}
+					description={`The average carbon dioxide level in ${mockData.city} is ${mockData.airQualityData.co} ppm.`}
+				/>
+				<Card
+					title={'Average Nitrogen Dioxide Level'}
+					description={`The average nitrogen dioxide level in ${mockData.city} is ${mockData.airQualityData.no2} ppm.`}
+				/>
 			</div>
 		</div>
 		<div id="invasivespecies">
 			<h1 class="text-secondary lg:text-5xl text-3xl">
 				Invasive Species <img class="inline" src="Species.svg" alt="Species Icon" />
 			</h1>
-			<div>
-				<p class="text-xl">
-					The average invasive species in {mockData.city} is {mockData.invasiveSpeciesData
-						.invasiveSpecies} species.
-				</p>
+			<div class="flex gap-x-4 mt-4 justify-center">
+				<Card
+					title={'Average Invasive Species 1'}
+					description={`The average invasive species in ${mockData.city} is ${mockData.invasiveSpeciesData.invasive_species[0].species_name} species.`}
+				/>
+				<Card
+					title={'Average Invasive Species 2'}
+					description={`The average invasive species in ${mockData.city} is ${mockData.invasiveSpeciesData.invasive_species[1].species_name} species.`}
+				/>
+				<Card
+					title={'Average Invasive Species 3'}
+					description={`The average invasive species in ${mockData.city} is ${mockData.invasiveSpeciesData.invasive_species[2].species_name} species.`}
+				/>
 			</div>
 		</div>
-		<div id="waterquality">
+		<div id="waterquality" class="mb-10">
 			<h1 class="lg:text-5xl text-3xl text-blue-500">
 				Water Quality <img class="inline" src="Water.svg" alt="Water Icon" />
 			</h1>
-			<div>
-				<p class="text-xl">
-					The average water quality in {mockData.city} is {mockData.waterQualityData.waterQuality} WQI.
-				</p>
+			<div class="flex gap-x-4 mt-4 justify-center">
+				<Card
+					title={'Average Water Quality PH'}
+					description={`The average water quality pH in ${mockData.city} is ${mockData.waterQualityData.ph_level} pH.`}
+				/>
+				<Card
+					title={'Average Water Temperature'}
+					description={`The average water temperature in ${mockData.city} is ${mockData.waterQualityData.temperature_celsius}°C.`}
+				/>
+				<Card
+					title={'Average Dissolved Oxygen Level'}
+					description={`The average dissolved oxygen level in ${mockData.city} is ${mockData.waterQualityData.dissolved_oxygen_ppm} mg/L.`}
+				/>
 			</div>
 		</div>
 	</div>
