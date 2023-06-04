@@ -32,25 +32,23 @@
 	<div class="bg-inherit flex-1 min-h-screen text-neutral mt-20 pt-20">
 		<div class="locale w-full max-w-lg m-auto py-16">
 			<div class="text-center">
-				<div class="">
-					<h1 class="lg:text-4xl text-3xl tracking-wider font-bold">
-						Transforming Actions into Sustainable Impact
-					</h1>
-					<h2 class="lg:text-2xl mt-4 text-xl font-bold">
-						Empowering Individuals to Lead the Green Revolution.
-					</h2>
+				<div class="max-w-lg">
+					<h1 class="lg:text-6xl text-4xl text-white font-bold">CREATE YOUR IMPACT</h1>
 					<div class=" text-center flex flex-col items-center">
+						<p class="py-6 text-md text-white max-w-sm text-center">
+							Enter your approximate location to get started analysing your environmental impact.
+						</p>
 						<div class="form-control mx-auto justify-center w-full py-0 max-w-sm">
 							<label class="label gap-x-10" for="city_or_zip_input">
-								<span class="label-text text-neutral">What is your city?</span>
-								<span class="label-text-alt text-neutral">Name or Zip</span>
+								<span class="label-text text-white text-neutral">What is your city?</span>
+								<span class="label-text-alt text-white text-neutral">Name or Zip</span>
 							</label>
 							<input
 								bind:value={$location.zip}
 								id="city_or_zip_input"
 								type="text"
 								placeholder="Enter city or zip"
-								class="input input-bordered w-full"
+								class="input input-bordered w-full text-primary-content"
 							/>
 						</div>
 						<a on:click={lookUpZip} href="/input" class="btn my-8">Get Started</a>
