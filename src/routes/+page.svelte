@@ -32,12 +32,14 @@
 	<div class="bg-inherit flex-1 min-h-screen text-neutral mt-20 pt-20">
 		<div class="locale w-full max-w-lg m-auto py-16">
 			<div class="text-center">
-				<div class="max-w-lg">
-					<h1 class="lg:text-6xl text-4xl font-bold">GET ANALYSING</h1>
+				<div class="">
+					<h1 class="lg:text-4xl text-3xl tracking-wider font-bold">
+						Transforming Actions into Sustainable Impact
+					</h1>
+					<h2 class="lg:text-2xl mt-4 text-xl font-bold">
+						Empowering Individuals to Lead the Green Revolution.
+					</h2>
 					<div class=" text-center flex flex-col items-center">
-						<p class="py-6 text-md max-w-sm text-center">
-							Enter your approximate location to get started analysing your environmental impact.
-						</p>
 						<div class="form-control mx-auto justify-center w-full py-0 max-w-sm">
 							<label class="label gap-x-10" for="city_or_zip_input">
 								<span class="label-text text-neutral">What is your city?</span>
@@ -48,7 +50,7 @@
 								id="city_or_zip_input"
 								type="text"
 								placeholder="Enter city or zip"
-								class="input input-bordered w-full text-primary-content"
+								class="input input-bordered w-full"
 							/>
 						</div>
 						<a on:click={lookUpZip} href="/input" class="btn my-8">Get Started</a>
@@ -60,7 +62,9 @@
 	<section
 		class="parallax mb-40 pr-10 rounded-3xl bg-sky-600 text-white flex-none text-neutral min-h-fit overflow-clip"
 	>
-		<h1 class="pl-10 pt-10 text-neutral text-white lg:text-5xl md:text-4xl text-3xl">Our Mission</h1>
+		<h1 class="pl-10 pt-10 text-neutral text-white lg:text-5xl md:text-4xl text-3xl">
+			Our Mission
+		</h1>
 		<p class="pl-10 pt-10 leading-loose text-lg lg:text-xl">
 			At Ecologme, our mission is to empower individuals and communities to make a positive impact
 			on the environment. Through user- and locale-based input, we provide actionable and motivating
@@ -81,8 +85,12 @@
 			a greener and more sustainable future.
 		</p>
 	</section>
-	<section class="parallax mb-40 pr-10 rounded-3xl bg-sky-600 text-white	flex-none text-neutral min-h-fit -mt-20 overflow-clip">
-		<h1 class="pl-10 pt-10 text-neutral text-white lg:text-5xl md:text-4xl text-3xl">What is Ecologme?</h1>
+	<section
+		class="parallax mb-40 pr-10 rounded-3xl bg-sky-600 text-white flex-none text-neutral min-h-fit -mt-20 overflow-clip"
+	>
+		<h1 class="pl-10 pt-10 text-neutral text-white lg:text-5xl md:text-4xl text-3xl">
+			What is Ecologme?
+		</h1>
 		<p class="pl-10 pt-10 leading-loose text-lg lg:text-xl">
 			Ecologme is a user-centric platform that leverages location-based input to generate
 			personalized and actionable ways for individuals to improve their environmental footprint. Our
@@ -91,9 +99,11 @@
 		</p>
 	</section>
 	<section
-		class="parallax mb-40 rounded-3xl pr-10 bg-sky-600 text-white	flex-none text-neutral min-h-fit -mt-20 overflow-clip"
+		class="parallax mb-40 rounded-3xl pr-10 bg-sky-600 text-white flex-none text-neutral min-h-fit -mt-20 overflow-clip"
 	>
-		<h1 class="pl-10 pt-10 text-neutral text-white lg:text-5xl md:text-4xl text-3xl">How does it work?</h1>
+		<h1 class="pl-10 pt-10 text-neutral text-white lg:text-5xl md:text-4xl text-3xl">
+			How does it work?
+		</h1>
 		<p class="pl-10 pt-10 leading-loose text-lg lg:text-xl">
 			Ecologme operates through a simple yet effective process. It begins by gathering user input,
 			where individuals provide information about their location, budget, free time, and specific
@@ -113,7 +123,6 @@
 			relevant, and impactful over time.
 		</p>
 	</section>
-
 </div>
 <svelte:window bind:scrollY={$scrollY} />
 

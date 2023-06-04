@@ -39,7 +39,7 @@
 		const solution = await solutionsRes.text();
 		// const solutionData = await solutionsRes.json();
 		// const solution = solutionData.choices[0].message.content;
-		results = solution.split('\n\n');
+		results = solution.split(solution.includes('\n\n') ? '\n\n' : '\n');
 		console.log('elapsedTime', elapsedTime, 'solution', results);
 		// console.log(solutionData);
 	}
@@ -141,26 +141,32 @@
 		<img class="bg-transparent" src="Group 4.png" alt="Big Logo" />
 	</div>
 </div>
-{#if loading}
-	<span class="loading loading-spinner loading-lg" />
-{/if}
-{#if results.length === 0 && !loading}
-	<!-- <span class="text-2xl">No results yet</span> -->
-{:else}
-	<ul class="flex flex-col gap-y-2">
-		{#each results as result, i}
-			{#if result.trim() !== ''}
-				<div class="collapse collapse-arrow bg-base-200 max-w-96">
-					<input type="radio" name="my-accordion-2" />
-					<div class="collapse-title text-xl">Goal {i}</div>
-					<div class="collapse-content">
-						<p>{result}</p>
+<div class="p-4 flex flex-col gap-y-4 mb-40">
+	{#if loading}
+		<span class="loading loading-spinner loading-lg" />
+	{/if}
+	{#if results.length === 0 && !loading}
+		<!-- <span class="text-2xl">No results yet</span> -->
+	{:else}
+		<ul class="flex flex-col gap-y-2">
+			{#each results as result, i}
+				{#if result.trim() !== ''}
+					<div class="collapse collapse-arrow bg-base-200 max-w-96">
+						<input type="radio" name="my-accordion-2" />
+						<div class="collapse-title text-xl">Goal {i + 1}</div>
+						<div class="collapse-content">
+							{#each result.split('-') as res, j}
+								{#if res !== `Goal ${i + 1}`}
+									<div class={'text-white text-lg ' + (j == 1 ? ' text-2xl' : '')}>{res}</div>
+								{/if}
+							{/each}
+						</div>
 					</div>
-				</div>
-			{/if}
-		{/each}
-	</ul>
-{/if}
+				{/if}
+			{/each}
+		</ul>
+	{/if}
+</div>
 
 <style>
 	.label-text {
